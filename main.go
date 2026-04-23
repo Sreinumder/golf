@@ -5,6 +5,7 @@ import (
 	"os"
 	"strings"
 
+	"rojgosai.com.np/golf/pkg/cat"
 	"rojgosai.com.np/golf/pkg/ls"
 	"rojgosai.com.np/golf/pkg/pwd"
 )
@@ -31,8 +32,10 @@ func main() {
 	args := os.Args
 
 	switch args[1] {
+
 	case "pwd":
 		fmt.Println(pwd.Pwd())
+
 	case "ls":
 		// Parse flags and paths
 		flags, paths := parseFlags(args[2:])
@@ -44,6 +47,17 @@ func main() {
 		} else {
 			fmt.Println(".:")
 			ls.Ls(".", flags)
+		}
+
+	case "cat":
+		flags, paths := parseFlags(args[2:])
+		if len(paths) > 0 {
+			for _, path := range paths {
+				fmt.Println("\n" + path + ":")
+				cat.Cat(path, flags)
+			}
+		} else {
+			fmt.Println("error: atleast one argument required.")
 		}
 	}
 }
