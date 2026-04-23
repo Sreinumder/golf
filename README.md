@@ -6,8 +6,8 @@ My attempt to create a very very basic version of [lf](https://github.com/gokceh
 
 ### explore how to recreate basic commands
 
-- [ ] pwd
-- [ ] ls
+- [x] pwd `go run ./main.go pwd`
+- [x] ls `go run ./main.go ls [-l]`
 - [ ] cat
 - [ ] touch
 - [ ] mv
