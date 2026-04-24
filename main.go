@@ -5,6 +5,7 @@ import (
 	"os"
 	"strings"
 
+	"rojgosai.com.np/golf/lf"
 	"rojgosai.com.np/golf/pkg/cat"
 	"rojgosai.com.np/golf/pkg/ls"
 	"rojgosai.com.np/golf/pkg/mv"
@@ -69,5 +70,13 @@ func main() {
 	case "mv":
 		_, paths := parseFlags(args[2:])
 		mv.Mv(paths)
+	case "lf":
+		_, paths := parseFlags(args[2:])
+		if len(paths) > 0 {
+			lf.Lf(paths[0])
+		} else {
+			lf.Lf(".")
+		}
 	}
+
 }
