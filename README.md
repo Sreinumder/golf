@@ -6,11 +6,11 @@ My attempt to create a very very basic version of [lf](https://github.com/gokceh
 
 ### explore how to recreate basic commands
 
-- [x] pwd `go run ./main.go pwd`
-- [x] ls `go run ./main.go ls [-l] [path: ~|..]`
-- [x] cat `go run ./main.go cat main.go [-n]`
-- [x] touch
-- [ ] mv
+- [x] pwd `./main.go pwd`
+- [x] ls `./main.go ls [-l] [path: ~|..]`
+- [x] cat `./main.go cat main.go [-n]`
+- [x] touch `./main.go touch a b`
+- [x] mv `./main.go mv go.mod mod.go` or `./main.go mv go.mod pkg/`
 - [ ] mkdir
 - [ ] rm
 - [ ] cp

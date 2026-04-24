@@ -7,6 +7,7 @@ import (
 
 	"rojgosai.com.np/golf/pkg/cat"
 	"rojgosai.com.np/golf/pkg/ls"
+	"rojgosai.com.np/golf/pkg/mv"
 	"rojgosai.com.np/golf/pkg/pwd"
 	"rojgosai.com.np/golf/pkg/touch"
 )
@@ -65,5 +66,8 @@ func main() {
 		for _, paths := range paths {
 			touch.Touch(paths)
 		}
+	case "mv":
+		_, paths := parseFlags(args[2:])
+		mv.Mv(paths)
 	}
 }
