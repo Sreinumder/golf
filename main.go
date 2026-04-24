@@ -8,6 +8,7 @@ import (
 	"rojgosai.com.np/golf/pkg/cat"
 	"rojgosai.com.np/golf/pkg/ls"
 	"rojgosai.com.np/golf/pkg/pwd"
+	"rojgosai.com.np/golf/pkg/touch"
 )
 
 func parseFlags(args []string) (map[string]int, []string) {
@@ -58,6 +59,11 @@ func main() {
 			}
 		} else {
 			fmt.Println("error: atleast one argument required.")
+		}
+	case "touch":
+		_, paths := parseFlags(args[2:])
+		for _, paths := range paths {
+			touch.Touch(paths)
 		}
 	}
 }
