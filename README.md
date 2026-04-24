@@ -14,10 +14,11 @@ My attempt to create a very very basic version of [lf](https://github.com/gokceh
 - [ ] mkdir
 - [ ] rm
 - [ ] cp
+- [ ] lf (main lf ui) `./main.go lf`
 
 ### explore how to draw tui in go
 
-- [ ] try [tview](https://github.com/rivo/tview)
+- [x] try [tview](https://github.com/rivo/tview)
 - [ ] try drawing 3 sections.
 
 ### planned desgin
